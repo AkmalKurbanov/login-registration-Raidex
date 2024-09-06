@@ -1,0 +1,58 @@
+.footer
+	flex: 0 0 auto
+	padding: rem(24) 0
+	
+	@include xs
+		padding: rem(20) 0
+
+	*
+		color: #3D3D39
+		font-size: rem(14)
+
+		@include md
+			font-size: rem(13)
+
+	
+	&__inner
+		@include aic-jcc
+		text-align: center
+
+	&__nav
+		@include md
+			margin-top: rem(10)
+
+		@include sm
+			margin-top: rem(15)
+
+		ul
+			padding: 0
+			@include aic
+
+			@include xs
+				flex-direction: column
+				align-items: flex-start
+
+			li
+				margin-right: rem(16)
+				list-style: none
+
+				@include xs
+					margin-right: 0
+					margin-bottom: rem(8)
+
+
+				&:last-child
+					margin: 0
+
+				a
+					color: #3D3D39
+					text-decoration: none
+					transition: $tr
+
+					&:hover
+						color: $mc
+
+
+
+
+	

@@ -1,0 +1,39 @@
+.btn
+  padding: 0 rem(24)
+  min-height: rem(48)
+  max-height: rem(48)
+  text-align: center
+  @include aic-jcc
+  font-size: rem(16)
+  outline: none
+  text-decoration: none
+  border-radius: rem(8)
+  transition: $tr
+  border: none
+  font-weight: 700
+  cursor: pointer
+
+
+  &_accent
+    background: $mc
+    color: white
+
+    &:hover
+      background: #181818
+
+  &_icon
+    font-size: rem(13)
+    .icon
+      max-width: rem(20)
+      min-height: rem(20)
+      height: rem(20)
+      margin-right: rem(10)
+
+  &_white
+    background: white
+    color: black
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,.15)
+
+    &:hover
+      box-shadow: 0 4px 10px 0 rgba(0,0,0,.15)
+      

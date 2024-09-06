@@ -1,0 +1,77 @@
+// USER VARIABLES SECTION
+
+$mc: #CE244B // Accent Color
+$fontsize: 16px // Body Font Size
+$tc: #333 // Text Color
+$lineheight: 1.65 // Document Line Height
+$userfont: "lato" // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+
+$wc: #fff
+$bc: #000
+$tr: all .3s
+$sc: #3D3D39
+
+// Bootstrap compatible gutter variable => $gutter
+// $grid-gutter-width: 30px
+// $gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'blocks/mixins/_flex'
+@import 'blocks/mixins/_rem'
+@import 'blocks/mixins/_media'
+@import 'node_modules/normalize.css/normalize'
+@import 'node_modules/intl-tel-input/build/css/intlTelInput.min'
+
+// @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+						
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl)
+		
+
+@include font('lato', normal, 400, '../fonts/lato-regular.woff2')
+@include font('lato', normal, 500, '../fonts/lato-medium.woff2')
+@include font('lato', normal, 600, '../fonts/lato-semibold.woff2')
+@include font('lato', normal, 700, '../fonts/lato-bold.woff2')
+@include font('lato', normal, 900, '../fonts/lato-black.woff2')
+
+// GENERAL CSS SETTINGS
+
+
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $mc
+	color: #fff
+
+// input, textarea
+// 	outline: none
+// 	&:focus:required:invalid
+// 		border-color: red
+// 	&:required:valid
+// 		border-color: green
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $tc
+	min-width: rem(320)
+	position: relative
+	overflow-x: hidden
+
+
+

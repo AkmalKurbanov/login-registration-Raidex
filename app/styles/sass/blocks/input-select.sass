@@ -1,0 +1,452 @@
+.input
+  position: relative
+  margin-bottom: rem(15)
+
+  label
+    font-size: rem(13)
+    margin-bottom: rem(4)
+    display: block
+    color: #3D3D39
+
+    span
+      color: red
+      margin-left: rem(5)
+
+  .icon
+    position: absolute
+    right: rem(7)
+    top: rem(25)
+    cursor: pointer
+
+    &_left-position
+      left: rem(5)
+      right: auto
+      top: 50%
+      transform: translateY(-50%)
+
+  input,
+  textarea
+    border: none
+    border-radius: rem(6)
+    border: rem(1) solid #dbdade
+    background: $wc
+    width: 100%
+    font-size: rem(15)
+    transition: $tr
+    color: #4B465C
+    background: $wc
+
+    &:focus
+      border-color: $mc
+
+    &::placeholder
+      color: rgba($sc, .6)
+      font-size: rem(15)
+
+  input
+    min-height: rem(38)
+    padding: 0 rem(15)
+
+  textarea
+    min-height: rem(85)
+    padding: rem(15)
+    resize: vertical
+
+  &__message,
+  .output-success,
+  .output-error
+    position: absolute
+    top: calc( 100% + 7px )
+    font-size: rem(13)
+    transition: $tr
+    opacity: 0
+    pointer-events: none
+
+  &.success
+    input
+      border-color: $mc
+      &:fosus
+        border-color: $mc
+    .input__message
+      color: $mc
+      opacity: 1
+
+    .output-success
+      background: $mc
+      color: $wc
+      padding: rem(3) rem(5)
+      border-radius: rem(3)
+      z-index: 1
+      opacity: 1
+
+  &.error
+    input
+      border-color: #EA5455
+      color: #EA5455
+
+      &:fosus
+        border-color: #EA5455
+    .input__message
+      color: #EA5455
+      opacity: 1
+
+    .output-error
+      background: #EA5455
+      color: $wc
+      padding: rem(3) rem(5)
+      border-radius: rem(3)
+      z-index: 1
+      opacity: 1
+
+    .icon_clear
+      svg
+        path
+          stroke: #EA5455
+
+  &.required
+    .input__message
+      opacity: 1
+      color: #A5A2AD
+      right: auto
+
+  &_icon
+    position: relative
+    input
+      padding-right: rem(30)
+
+  &_info
+    .info
+      position: absolute
+      transition: $tr
+      background: #2a2b2c
+      min-width: rem(250)
+      max-width: rem(250)
+      width: 100%
+      top: 50%
+      transform: translateY(-50%)
+      right: 0
+      opacity: 0
+      pointer-events: none
+      color: $wc
+      border-radius: rem(6)
+
+      &__arrow
+        left: calc( 100% - 5px )
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        svg
+          width: auto
+          height: auto
+
+    .icon
+      &:hover
+        .info
+          right: rem(35)
+          opacity: 1
+
+  &_phone
+    .iti
+      width: 100%
+    input
+      width: 100%
+
+  &_gray
+    input
+      background: #eee
+
+  &_pass
+    input
+      padding-right: rem(35)
+    .icon
+      bottom: rem(7)
+      top: auto
+
+  &__pass-icon
+    &.close
+      display: none
+
+.input-wrap
+  @include fww
+  align-items: flex-end
+  margin-left: rem(-8)
+  margin-right: rem(-8)
+
+  @include xs
+    margin: 0
+
+  &__col
+    padding: 0 rem(8)
+    margin-bottom: rem(15)
+
+    .input
+      margin-bottom: 0
+
+    &_quarter
+      width: 33.33%
+      @include xs
+        width: 100%
+        padding: 0
+
+    &_half
+      width: 50%
+      @include xs
+        width: 100%
+        padding: 0
+
+    &_half-2
+      width: 25%
+      @include xs
+        width: 100%
+        padding: 0
+
+    &_two-thirds
+      width: 66.66%
+      @include xs
+        width: 100%
+        padding: 0
+
+    &_full
+      width: 100%
+      @include xs
+        width: 100%
+        padding: 0
+
+  &_documents
+    display: none
+
+  &_parcel-info
+    .input-wrap__col_half
+      @media (max-width: 1300px)
+        width: 100%
+
+.md-full
+  @include md
+    width: 100%
+
+.md-half
+  @include md
+    width: 50%
+
+.md-quarter
+  @include md
+    width: 33.33%
+
+.sm-half
+  @include sm
+    width: 50%
+
+  @include xs
+    width: 100%
+
+.sm-full
+  @include sm
+    width: 100%
+
+.select-wrap
+  display: flex
+
+  @include md
+    margin-right: 0!important
+    width: 100%
+
+  @include xs
+    flex-direction: column
+
+  .select__label
+    font-size: rem(15)
+    font-weight: 600
+    margin-right: rem(50)
+
+    @include xs
+      margin-right: 0
+      margin-bottom: rem(15)
+      br
+        display: none
+
+    span
+      color: red
+
+.select
+  position: relative
+  &__wrap
+    border-radius: rem(6)
+    border: rem(1) solid #DBDADE
+    overflow: hidden
+
+  &__label
+    margin-bottom: rem(5)
+    font-size: rem(13)
+
+  &__selected
+    cursor: pointer
+    padding: rem(5) rem(14)
+    font-size: rem(15)
+    transition: $tr
+    @include aic-jfcsb
+    color: #9BA3A7
+    width: 100%
+    min-height: rem(36)
+
+    .icon
+      transition: $tr
+      max-width: rem(17)
+      min-width: rem(17)
+      height: rem(17)
+
+  &__selected-img
+    min-width: rem(22)
+    max-width: rem(22)
+    width: 100%
+    height: rem(22)
+    margin-right: rem(10)
+    border-radius: 100%
+    overflow: hidden
+    position: relative
+    border: rem(1) solid #dbdade
+
+    img
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      object-fit: cover
+      object-position: center
+
+
+  .select-country-js
+    @include aic
+
+  &__dropdown
+    opacity: 0
+    position: absolute
+    transition: $tr
+    pointer-events: none
+    left: 0
+    top: 80%
+    width: 100%
+    background: $wc
+    z-index: 2
+    border-radius: 0 0 rem(6) rem(6)
+    max-height: rem(190)
+    overflow-y: auto
+
+    &::-webkit-scrollbar
+      width: 5px
+      height: 8px
+
+    /* ползунок скроллбара */
+    &::-webkit-scrollbar-thumb
+      background-color: #b2b2b2
+      border-radius: 9em
+
+    &::-webkit-scrollbar-thumb:hover
+      background-color: rgba($mc, .5)
+
+  &__dropdown-item
+    display: none
+
+    &:nth-child(2)
+      display: block
+      max-height: rem(300)
+
+  &__option
+    padding: rem(7) rem(14)
+    font-size: rem(15)
+    cursor: pointer
+    transition: $tr
+    min-height: rem(38)
+    @include aic
+
+    &:hover
+      background: #e9f0f0
+
+    .icon
+      margin-right: rem(12)
+      border-radius: 100%
+      overflow: hidden
+      position: relative
+      border: rem(1) solid #dbdade
+      
+      img
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        object-fit: cover
+        object-position: center
+
+  &.open
+
+    .select__selected
+      background: #e9f0f0
+      color: $bc
+      border-radius: rem(6)
+
+      .icon
+        transform: rotate(180deg)
+
+    .text
+      color: $bc
+
+    .select__wrap
+      border-radius: rem(6) rem(6) 0 0
+      border-color: transparent
+      box-shadow: 0px 4px 16px 0px rgba(165, 163, 174, 0.45)
+
+    .select__dropdown
+      opacity: 1
+      pointer-events: inherit
+      top: calc( 100% - 1px )
+      box-shadow: 0px 4px 16px 0px rgba(165, 163, 174, 0.45)
+
+  &.selected
+    .select__selected
+      background: #e9f0f0
+      color: $bc
+    .text
+      color: $bc
+
+  &_sm
+    max-width: rem(160)
+    min-width: rem(160)
+    width: 100%
+
+    @include xs
+      max-width: 100%
+
+  &_no-scroll
+    .select__dropdown
+      max-height: none
+
+  &_parcel-size
+    position: relative
+
+    .simple-tabs
+      position: sticky
+      right: 0
+      top: 0
+      background: $wc
+      z-index: 1
+
+      ul
+        li
+          margin: 0
+          a
+            font-size: rem(12)
+            padding: rem(10)
+            display: block
+            text-align: center
+
+.input-wrap-inn-input
+  position: relative
+  
+
+  .input
+    display: none

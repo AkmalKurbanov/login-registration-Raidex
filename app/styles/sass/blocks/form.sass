@@ -1,0 +1,228 @@
+.form
+  padding: rem(80) 0
+
+  @include lg
+    padding: rem(40) 0
+
+  &__inner
+    @include jfcsb
+    align-items: stretch
+
+    @include sm
+      flex-direction: column
+
+  .input-wrap
+    width: 100%
+
+  &__col
+    position: relative
+
+    p
+      color: black
+      font-size: rem(18)
+      margin-bottom: rem(24)
+      text-align: center
+
+      @include md
+        margin-bottom: rem(15)
+
+      @include xs
+        font-size: rem(16)  
+
+    &:first-child
+      width: 50%
+
+      @include md
+        width: 60%
+
+      @include sm
+        width: 100%  
+
+      .btn
+        margin: 0 auto
+        margin-top: rem(24)
+        max-width: rem(320)
+        width: 100%
+        
+        @include xs
+          max-width: 100%
+        
+        
+        
+        
+
+    &:last-child
+      // padding-left: rem(70)    
+      display: flex
+      flex-direction: column
+      justify-content: center
+      max-width: 50%
+      width: 100%
+      position: relative
+
+      @include md
+        max-width: 40%
+
+      @include sm
+        max-width: 100% 
+        margin-top: rem(24)
+
+      &::before
+        position: absolute
+        content: ''
+        height: rem(350)
+        width: rem(1)
+        background: #D9D9D9
+        left: rem(30)
+        top: 50%
+        transform: translateY(-50%)
+
+        @include lg
+          left: rem(10)
+
+        @include md
+          left: 0
+
+        @include sm
+          display: none  
+
+      .btn
+        position: relative
+        max-width: rem(400)
+        width: 100%
+        margin: 0 auto
+
+        @include md
+          max-width: rem(250)
+          padding: 0 rem(5)
+
+        @include sm
+          max-width: rem(320)
+
+        @include xs
+          max-width: 100%  
+
+
+  &__bg
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-50%)
+    max-width: rem(365)
+    width: 100%
+    opacity: .05
+    pointer-events: none
+    svg
+      width: 100%
+
+    @include md
+      max-width: rem(250)
+    
+    @include sm
+      display: none
+
+  &__agree
+    color: #37474F
+    font-size: rem(14)
+    margin-top: rem(8)
+    text-align: center
+
+    @include xs
+      font-size: rem(13)
+      line-height: rem(20)
+
+    a
+      color: $mc
+      text-decoration: underline
+
+  &__btn-control
+    @include aic-jfcsb
+    margin-top: rem(24)
+    
+    @include sm
+      flex-direction: column
+
+  &__btn-control-item
+    width: 50%
+    @include aic-jcc
+    text-align: center
+    
+
+    &:first-child
+      @include md
+        width: 60%
+    
+      @include sm
+        width: 100%
+
+    &:last-child
+      @include md
+        width: 40%
+
+      @include sm
+        width: 100%  
+
+    .btn
+      max-width: rem(320)
+      width: 100%
+      margin: 0 auto
+
+    p
+      color: black
+      font-weight: 600
+
+      a
+        color: $mc
+        text-decoration: underline
+
+        &:hover
+          text-decoration: none
+
+  &_login
+    form
+      max-width: rem(345)
+      width: 100%
+      margin: auto
+
+    .or
+      text-align: center
+      margin: rem(24) 0
+      font-size: rem(18)
+      color: #37474F
+
+    .input
+      margin-bottom: rem(8)
+
+    .btn
+      width: 100%
+      margin-top: rem(24)
+
+    .reg
+      color: black
+      text-decoration: none
+      font-weight: 600
+      text-align: center
+      display: block
+      margin-top: rem(20)
+      transition: $tr
+
+      &:hover
+        color: $mc
+
+  &__forgot-input
+    @include aic
+    label
+      margin-left: rem(8)
+      color: #37474f
+      font-size: rem(15)
+
+  &__forgot
+    @include aic-jfcsb
+    margin-top: rem(16)
+    a
+      color: #37474f
+      font-size: rem(15)
+      transition: $tr
+
+      &:hover
+        color: $mc

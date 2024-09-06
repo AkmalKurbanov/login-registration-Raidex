@@ -1,0 +1,15 @@
+.iti__flag
+  background-image: url("../images/dist/flags.webp")
+  overflow: hidden
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+  .iti__flag
+    background-image: url("../images/dist/flags@2x.webp")
+
+.iti__country-list
+  li
+    @include md
+      font-size: rem(14)
+    
+    @include sm
+      font-size: rem(13)

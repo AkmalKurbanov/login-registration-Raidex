@@ -1,0 +1,36 @@
+.ckeckbox
+  position: relative
+
+  & input
+    cursor: pointer
+    height: 1.1875rem
+    opacity: 0
+    width: 1.1875rem
+    z-index: 9
+
+  & input:checked ~ span
+    background-color: $mc
+    border: none
+
+  & input:checked ~ span svg
+    display: block
+
+  & span
+    background-color: #fff
+    border: 0.0625rem solid $mc
+    border-radius: rem(6)
+    cursor: pointer
+    height: 1.1875rem
+    left: 50%
+    pointer-events: none
+    position: absolute
+    top: 50%
+    -webkit-transform: translate(-50%, -50%)
+    -ms-transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%)
+    width: 1.1875rem
+
+  & span svg
+    display: none
+    height: 100%
+    width: 100%
